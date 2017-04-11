@@ -130,6 +130,7 @@ Examples are placed in the path <project root>/example. Because of the two imple
 
 ## To Do
 
+* add example output
 * create dedicated repository
 * create release history
 * write unit test
@@ -139,6 +140,7 @@ Examples are placed in the path <project root>/example. Because of the two imple
     * SectionStateMachine
     * StatisticListOfLineParser
     * Storage
+ * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
 
 ## Done
 
