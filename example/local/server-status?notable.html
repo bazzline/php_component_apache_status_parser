@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head>
+<title>Apache Status</title>
+</head><body>
+<h1>Apache Server Status for first.example.host.org (via 123.45.67.89)</h1>
+
+<dl><dt>Server Version: Apache/2.4.10 (Debian)</dt>
+<dt>Server MPM: prefork</dt>
+<dt>Server Built: Oct 06 1983 20:44:43
+</dt></dl><hr /><dl>
+<dt>Current Time: Monday, 30-Jan-2017 20:22:47 CET</dt>
+<dt>Restart Time: Monday, 30-Jan-2017 15:12:12 CET</dt>
+<dt>Parent Server Config. Generation: 1</dt>
+<dt>Parent Server MPM Generation: 0</dt>
+<dt>Server uptime:  5 hours 10 minutes 35 seconds</dt>
+<dt>Server load: 1.22 1.05 0.83</dt>
+<dt>Total accesses: 5279 - Total Traffic: 29.6 MB</dt>
+<dt>CPU Usage: u959.08 s127.38 cu1.72 cs.95 - 5.84% CPU load</dt>
+<dt>.283 requests/sec - 1667 B/second - 5.7 kB/request</dt>
+<dt>10 requests currently being processed, 4 idle workers</dt>
+</dl><pre>_WWW_WWWWKW_....._.W............................................
+................................................................
+......................</pre>
+<p>Scoreboard Key:<br />
+"<b><code>_</code></b>" Waiting for Connection,
+"<b><code>S</code></b>" Starting up,
+"<b><code>R</code></b>" Reading Request,<br />
+"<b><code>W</code></b>" Sending Reply,
+"<b><code>K</code></b>" Keepalive (read),
+"<b><code>D</code></b>" DNS Lookup,<br />
+"<b><code>C</code></b>" Closing connection,
+"<b><code>L</code></b>" Logging,
+"<b><code>G</code></b>" Gracefully finishing,<br />
+"<b><code>I</code></b>" Idle cleanup of worker,
+"<b><code>.</code></b>" Open slot with no current process<br />
+<p />
+<hr /><h2>Server Details</h2>
+
+<b>Server 0-0</b> (22754): 0|24|186 [Ready] u47.68 s5.9 cu0 cs0
+ 19 1 (0 B|1.0 MB|3.5 MB)
+ <i>198.76.54.42 {GET / HTTP/1.1}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 1-0</b> (5743): 0|255|427 [<b>Write</b>] u157.22 s21.37 cu.4 cs.35
+ 6 0 (0 B|183.1 kB|372.5 kB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 2-0</b> (22407): 0|25|430 [<b>Write</b>] u88.52 s10.52 cu0 cs0
+ 38 0 (0 B|19.9 kB|426.0 kB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 3-0</b> (22408): 0|25|429 [<b>Write</b>] u79.95 s9.34 cu0 cs0
+ 20 0 (0 B|1.2 MB|4.0 MB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 4-0</b> (19237): 0|389|476 [Ready] u170.07 s26.8 cu.57 cs.28
+ 16 46267 (0 B|1.4 MB|1.6 MB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 5-0</b> (23112): 0|15|184 [<b>Write</b>] u48.43 s5.7 cu0 cs0
+ 45 0 (0 B|37.3 kB|0.6 MB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 6-0</b> (23130): 0|14|488 [<b>Write</b>] u10.88 s1.3 cu.05 cs.04
+ 24 0 (0 B|1.0 MB|3.7 MB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 7-0</b> (21977): 0|32|156 [<b>Write</b>] u84.14 s10.03 cu0 cs0
+ 41 0 (0 B|34.3 kB|242.8 kB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 8-0</b> (23960): 0|1|127 [<b>Write</b>] u9.93 s1.09 cu0 cs0
+ 0 0 (0 B|851 B|1.2 MB)
+ <i>123.45.67.254 {GET /server-status?notable HTTP/1.1}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 9-0</b> (23019): 2|21|374 [<b>Keepalive</b>] u51.13 s5.96 cu0 cs0
+ 0 1794 (66.8 kB|134.7 kB|496.7 kB)
+ <i>123.45.67.121 {GET /bad.php?some=old&and=very&long=get&string=with}</i> <b>[first.example.host.o]</b><br />
+
+<b>Server 10-0</b> (23594): 0|11|479 [<b>Write</b>] u11.18 s1.18 cu0 cs0
+ 31 0 (0 B|69.7 kB|2.6 MB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 11-0</b> (24121): 0|0|252 [Ready] u18.7 s2.06 cu0 cs0
+ 2 0 (0 B|0 B|3.9 MB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 12-0</b> (-): 0|0|120 [Dead] u0 s0 cu0 cs0
+ 111 0 (0 B|0 B|1.4 MB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 13-0</b> (-): 0|0|501 [Dead] u161.59 s23.68 cu.7 cs.28
+ 105 0 (0 B|0 B|3.1 MB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 14-0</b> (-): 0|0|348 [Dead] u0 s0 cu0 cs0
+ 110 0 (0 B|0 B|1.4 MB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 15-0</b> (-): 0|0|27 [Dead] u0 s0 cu0 cs0
+ 109 0 (0 B|0 B|1.0 MB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 16-0</b> (-): 0|0|250 [Dead] u0 s0 cu0 cs0
+ 108 0 (0 B|0 B|172.1 kB)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 17-0</b> (23857): 0|3|20 [Ready] u10.08 s1.22 cu0 cs0
+ 9 46862 (0 B|8.7 kB|20.4 kB)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 18-0</b> (-): 0|0|1 [Dead] u0 s0 cu0 cs0
+ 107 0 (0 B|0 B|196 B)
+ <i>::1 {OPTIONS * HTTP/1.0}</i> <b>[example.host.org:80]</b><br />
+
+<b>Server 19-0</b> (23859): 0|4|4 [<b>Write</b>] u9.58 s1.23 cu0 cs0
+ 13 0 (0 B|2643 B|2643 B)
+ <i>123.45.67.121 {GET /example/backend/api/important-process-name}</i> <b>[example.host.org:80]</b><br />
+
+</body></html>

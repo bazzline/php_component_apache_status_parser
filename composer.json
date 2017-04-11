@@ -1,0 +1,32 @@
+{
+    "name": "net_bazzline/apache_server_status_parser",
+    "description": "php component to ease up reading and processing the apache server status (mod_status)",
+    "type": "library",
+    "require": {
+        "jonasrudolph/php-component-stringutility": "1.2.1",
+        "net_bazzline/php_component_curl": "^0.15.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "LGPLv3",
+    "authors": [
+        {
+            "name": "Stev Leibelt",
+            "email": "artodeto@bazzline.net",
+            "homepage": "https://artodeto.bazzline.net",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Net\\Bazzline\\Component\\ApacheServerStatusParser\\": "source/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Net\\Bazzline\\Component\\ApacheServerStatusParser\\": "test/"
+        }
+    }
+}
