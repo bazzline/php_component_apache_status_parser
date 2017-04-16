@@ -90,6 +90,57 @@ Examples are placed in the path <project root>/example. Because of the two imple
 <project root>/example/remote/parse_detail_only.php [<url to the apache status page>]
 ```
 
+## Example Output
+
+```
+#parsed detail
+##just one detail
+http_method: GET
+ip_address: 198.76.54.42
+pid: 22754
+status: Ready
+uri_authority: example.host.org:80
+uri_path_with_query: /
+
+#parsed information
+date_of_built: Oct 06 1983 20:44:43
+identifier: first.example.host.org (via 123.45.67.89)
+mode_of_mpm: prefork
+version: Apache/2.4.10 (Debian)
+
+#parsed scoreboard
+process: _WWW_WWWWKW_....._.W..................................................................................................................................
+legend
+    0: "_" Waiting for Connection,
+    1: "S" Starting up,
+    2: "R" Reading Request,
+    3: "W" Sending Reply,
+    4: "K" Keepalive (read),
+    5: "D" DNS Lookup,
+    6: "C" Closing connection,
+    7: "L" Logging,
+    8: "G" Gracefully finishing,
+    9: "I" Idle cleanup of worker,
+    10: "." Open slot with no current process
+
+#parsed statistic
+b_per_request: 1667
+cpu_load: 584
+cpu_usage: u959.08 s127.38 cu1.72 cs.95
+current_timestamp: 1485804167
+idle_workers: 4
+kb_per_request: 57
+parent_server_configuration_generation: 1
+parent_server_mpm_generation: 1
+requests_currently_being_processed: 10
+requests_per_second: 283
+restart_timestamp: 1485785532
+server_load: 1.22 1.05 0.83
+server_up_time: 5 hours 10 minutes 35 seconds
+total_accesses: 5279
+total_traffic:  5279
+```
+
 # Workflow
 
 * get content
@@ -130,8 +181,6 @@ Examples are placed in the path <project root>/example. Because of the two imple
 
 ## To Do
 
-* add example output
-* create dedicated repository
 * create release history
 * write unit test
     * DetailListOfLineParser
@@ -144,7 +193,9 @@ Examples are placed in the path <project root>/example. Because of the two imple
 
 ## Done
 
+* added example output
 * added how to section
+* created dedicated repository
 * created
     * HttpFileFetcher
     * Service/Builder section
