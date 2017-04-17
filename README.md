@@ -177,40 +177,38 @@ total_traffic:  5279
 * Service\StateMachine
     * contains a class to ease up splitting the content into logical parts
 
-# Future Improvements
+# History
 
-## To Do
-
-* create release history
-* write unit test
-    * DetailListOfLineParser
-    * Processor
-    * ScoreboardListOfLineParser
-    * SectionStateMachine
-    * StatisticListOfLineParser
-    * Storage
- * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
-
-## Done
-
-* added example output
-* added how to section
-* created dedicated repository
-* created
-    * HttpFileFetcher
-    * Service/Builder section
-* example written
-    * local (using FileFetcher)
-        * parse all (uses the FullStorage)
-        * parse detail only (uses the DetailOnlyStorage)
-    * remote (using HttpFetcher)
-        * parse all (uses the FullStorage)
-* unit test written
-    * DetailOnly
-* parser and domain object written
-    * information
-    * scoreboard
-    * statistic
+* upcomming
+    * @todo
+        * create release history
+        * write unit test
+            * DetailListOfLineParser
+            * Processor
+            * ScoreboardListOfLineParser
+            * SectionStateMachine
+            * StatisticListOfLineParser
+            * Storage
+         * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
+* [0.1.0](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.0) - released at 2017-04-17
+    * added example output
+    * added how to section
+    * created dedicated repository
+    * created
+        * HttpFileFetcher
+        * Service/Builder section
+    * example written
+        * local (using FileFetcher)
+            * parse all (uses the FullStorage)
+            * parse detail only (uses the DetailOnlyStorage)
+        * remote (using HttpFetcher)
+            * parse all (uses the FullStorage)
+    * unit test written
+        * DetailOnly
+    * parser and domain object written
+        * information
+        * scoreboard
+        * statistic
 
 # Notes
 
