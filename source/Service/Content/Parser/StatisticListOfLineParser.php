@@ -110,7 +110,7 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                     $lineAsArray    = explode(' - ', $line);
 
                     $listOMandatoryProperties['total_accesses'] = substr($lineAsArray[0], 16);
-                    $listOMandatoryProperties['total_traffic']  = substr($lineAsArray[0], 15);
+                    $listOMandatoryProperties['total_traffic']  = substr($lineAsArray[1], 15);
                 } else if ($stringUtility->endsWith($line, 'request')) {
                     $lineAsArray    = explode(' - ', $line);
 

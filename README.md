@@ -190,6 +190,8 @@ total_traffic:  5279
             * StatisticListOfLineParser
             * Storage
          * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
+* [0.1.1](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.1) - released at 2017-04-17
+    * fixed statistic->total_traffic
 * [0.1.0](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.0) - released at 2017-04-17
     * added example output
     * added how to section
