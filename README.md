@@ -92,23 +92,31 @@ Examples are placed in the path <project root>/example. Because of the two imple
 
 ## Example Output
 
+### Parsed Detail
+
+Just one detail.
+
 ```
-#parsed detail
-##just one detail
 http_method: GET
 ip_address: 198.76.54.42
 pid: 22754
 status: Ready
 uri_authority: example.host.org:80
 uri_path_with_query: /
+```
 
-#parsed information
+### Parsed Information
+
+```
 date_of_built: Oct 06 1983 20:44:43
 identifier: first.example.host.org (via 123.45.67.89)
 mode_of_mpm: prefork
 version: Apache/2.4.10 (Debian)
+```
 
-#parsed scoreboard
+### Parsed Scoreboard
+
+```
 process: _WWW_WWWWKW_....._.W..................................................................................................................................
 legend
     0: "_" Waiting for Connection,
@@ -122,8 +130,11 @@ legend
     8: "G" Gracefully finishing,
     9: "I" Idle cleanup of worker,
     10: "." Open slot with no current process
+```
 
-#parsed statistic
+### Parsed Statistic
+
+```
 b_per_request: 1667
 cpu_load: 584
 cpu_usage: u959.08 s127.38 cu1.72 cs.95
@@ -138,7 +149,7 @@ restart_timestamp: 1485785532
 server_load: 1.22 1.05 0.83
 server_up_time: 5 hours 10 minutes 35 seconds
 total_accesses: 5279
-total_traffic:  5279
+total_traffic: 29.6 MB
 ```
 
 # Workflow
@@ -176,69 +187,6 @@ total_traffic:  5279
     * contains classes to share the logical content parts
 * Service\StateMachine
     * contains a class to ease up splitting the content into logical parts
-
-# Change Log
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
-
-## [Open]
-
-### To Add
-
-* create release history
-* write unit test
-    * DetailListOfLineParser
-    * Processor
-    * ScoreboardListOfLineParser
-    * SectionStateMachine
-    * StatisticListOfLineParser
-    * Storage
- * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
-
-### To Change
-
-## [Unreleased]
-
-### Added
-
-### Changed
-
-* converted history to [changelog](http://keepachangelog.com/en/0.3.0/)
-
-## [0.1.1] - released at 2017-04-17
-
-### Added
-
-### Changed
-
-* fixed statistic->total_traffic
-
-## [0.1.0] - released at 2017-04-17
-
-### Added
-
-* added example output
-* added how to section
-* created dedicated repository
-* created
-    * HttpFileFetcher
-    * Service/Builder section
-* example written
-    * local (using FileFetcher)
-        * parse all (uses the FullStorage)
-        * parse detail only (uses the DetailOnlyStorage)
-    * remote (using HttpFetcher)
-        * parse all (uses the FullStorage)
-* unit test written
-    * DetailOnly
-* parser and domain object written
-    * information
-    * scoreboard
-    * statistic
-
-### Changed
 
 # Notes
 
