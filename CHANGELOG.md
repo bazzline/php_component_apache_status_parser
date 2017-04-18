@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+* added ".idea" to the ".gitignore"
+
 ### Changed
 
 * converted history to [changelog](http://keepachangelog.com/en/0.3.0/)
