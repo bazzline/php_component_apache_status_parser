@@ -4,6 +4,10 @@ This project aims to deliver an easy to use component to read the apache server 
 
 This component is relying on the [apache mod_status](https://httpd.apache.org/docs/2.2/mod/mod_status.html) and the undocumented query "[?notable](https://www.cyberciti.biz/faq/apache-server-status/)" ("?auto" does not contain information about the pid).
 
+The build status of the current master branch is tracked by Travis CI:
+[![Build Status](https://travis-ci.org/bazzline/php_component_apache_status_parser.png?branch=master)](http://travis-ci.org/bazzline/php_component_apache_status_parser)
+[![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_apache_status_parser.svg)](https://packagist.org/packages/net_bazzline/php_component_apache_status_parser)
+
 # Project Goals
 
 * provides simple access to process information (deals with strings)

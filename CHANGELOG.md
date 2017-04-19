@@ -17,9 +17,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     * SectionStateMachine
     * StatisticListOfLineParser
     * Storage
- * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
- * add link to the openhub.com project side
- * add a how to install section by using packagist
+* add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
+* add link to the openhub.com project side
+* add a link to the scrutinizer status
+* add a link to the version eye status
+* add a how to install section by using packagist
 
 ### To Change
 
@@ -27,7 +29,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* added ".idea" to the ".gitignore"
+* link to the travis build status
+* ".idea" to the ".gitignore"
 
 ### Changed
 
