@@ -21,7 +21,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * add link to the openhub.com project side
 * add a link to the scrutinizer status
 * add a link to the version eye status
-* add a how to install section by using packagist
 
 ### To Change
 
@@ -29,8 +28,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* link to the travis build status
 * ".idea" to the ".gitignore"
+* install section
+* link to the travis build status
 
 ### Changed
 

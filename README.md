@@ -156,6 +156,22 @@ total_accesses: 5279
 total_traffic: 29.6 MB
 ```
 
+# Install
+
+## By Hand
+
+```
+mkdir -p vendor/net_bazzline/php_component_apache_status_parser
+cd vendor/net_bazzline/php_component_apache_status_parser
+git clone https://github.com/bazzline/php_component_apache_status_parser .
+```
+
+## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_apache_status_parser)
+
+```
+composer require net_bazzline/php_component_apache_status_parser:dev-master
+```
+
 # Workflow
 
 * get content
