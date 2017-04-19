@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 * ".idea" to the ".gitignore"
 * install section
+* keywords in the composer.json
 * link to the travis build status
 
 ### Changed
