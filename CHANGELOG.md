@@ -28,6 +28,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+### Changed
+
+## [0.1.2](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.2) - released at 2017-04-19
+
+### Added
+
 * ".idea" to the ".gitignore"
 * install section
 * keywords in the composer.json
