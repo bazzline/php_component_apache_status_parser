@@ -12,7 +12,7 @@
         "server status",
         "lgpl",
         "free as in freedom",
-        "php5"
+        "php5",
         "php7"
     ],
     "type": "library",
