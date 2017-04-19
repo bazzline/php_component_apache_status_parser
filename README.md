@@ -72,7 +72,7 @@ var_dump(
 
 # Example
 
-Examples are placed in the path <project root>/example. Because of the two implemented content fetchers, they are devide into the two categories "local" and "remote".
+Examples are placed in the path [<project root>/example](https://github.com/bazzline/php_component_apache_status_parser/tree/master/example). Because of the two implemented content fetchers, they are devide into the two categories "[local](https://github.com/bazzline/php_component_apache_status_parser/tree/master/example/local)" and "[remote](https://github.com/bazzline/php_component_apache_status_parser/tree/master/example/remote)".
 
 ## Example Using Local File
 
