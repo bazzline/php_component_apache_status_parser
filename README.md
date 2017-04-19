@@ -5,8 +5,8 @@ This project aims to deliver an easy to use component to read the apache server 
 This component is relying on the [apache mod_status](https://httpd.apache.org/docs/2.2/mod/mod_status.html) and the undocumented query "[?notable](https://www.cyberciti.biz/faq/apache-server-status/)" ("?auto" does not contain information about the pid).
 
 The build status of the current master branch is tracked by Travis CI:
-[![Build Status](https://travis-ci.org/bazzline/php_component_apache_status_parser.png?branch=master)](http://travis-ci.org/bazzline/php_component_apache_status_parser)
-[![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_apache_status_parser.svg)](https://packagist.org/packages/net_bazzline/php_component_apache_status_parser)
+[![Build Status](https://travis-ci.org/bazzline/php_component_apache_server_status_parser.png?branch=master)](http://travis-ci.org/bazzline/php_component_apache_server_status_parser)
+[![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_apache_server_status_parser.svg)](https://packagist.org/packages/net_bazzline/php_component_apache_server_status_parser)
 
 # Project Goals
 
@@ -161,15 +161,15 @@ total_traffic: 29.6 MB
 ## By Hand
 
 ```
-mkdir -p vendor/net_bazzline/php_component_apache_status_parser
-cd vendor/net_bazzline/php_component_apache_status_parser
-git clone https://github.com/bazzline/php_component_apache_status_parser .
+mkdir -p vendor/net_bazzline/php_component_apache_server_status_parser
+cd vendor/net_bazzline/php_component_apache_server_status_parser
+git clone https://github.com/bazzline/php_component_apache_server_status_parser .
 ```
 
-## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_apache_status_parser)
+## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_apache_server_status_parser)
 
 ```
-composer require net_bazzline/php_component_apache_status_parser:dev-master
+composer require net_bazzline/php_component_apache_server_status_parser:dev-master
 ```
 
 # Workflow
