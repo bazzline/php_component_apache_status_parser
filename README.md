@@ -218,3 +218,7 @@ Thanks to:
 * [apache for the cloud](http://people.apache.org/~jim/presos/ACNA11/Apache_httpd_cloud.pdf)
 * [reading apache server status](https://answers.splunk.com/answers/28058/reading-apache-server-status-output.html)
 * [Apache Server Status](https://www.phpclasses.org/browse/file/17516.html)
+
+# Final Words
+
+Star it if you like it :-). Add issues if you need it. Pull patches if you enjoy it. Write a blog entry if you use it. [Donate something](https://gratipay.com/~stevleibelt) if you love it :-].
