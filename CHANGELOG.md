@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 * link to this change log in the [README.md](https://github.com/bazzline/php_component_apache_status_parser/blob/master/README.md).
+* link to the scrutinizer status
 * most important final words in the README.md
 * supported for php version 7.1
 

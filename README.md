@@ -8,6 +8,9 @@ The build status of the current master branch is tracked by Travis CI:
 [![Build Status](https://travis-ci.org/bazzline/php_component_apache_status_parser.png?branch=master)](http://travis-ci.org/bazzline/php_component_apache_status_parser)
 [![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_apache_server_status_parser.svg)](https://packagist.org/packages/net_bazzline/php_component_apache_server_status_parser)
 
+The scrutinizer status is:
+[![code quality](https://scrutinizer-ci.com/g/bazzline/php_component_apache_status_parser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_apache_status_parser/)
+
 The current change log can be found [here](https://github.com/bazzline/php_component_apache_status_parser/blob/master/CHANGELOG.md).
 
 # Project Goals
