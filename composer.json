@@ -13,7 +13,8 @@
         "lgpl",
         "free as in freedom",
         "php5",
-        "php7"
+        "php7",
+        "changelog"
     ],
     "type": "library",
     "require": {
