@@ -18,7 +18,7 @@
     "type": "library",
     "require": {
         "jonasrudolph/php-component-stringutility": "1.2.1",
-        "net_bazzline/php_component_curl": "^0.15.1",
+        "net_bazzline/php_component_curl": "^1.0",
         "php": ">=5.6"
     },
     "require-dev": {

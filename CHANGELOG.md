@@ -34,6 +34,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+* updated dependency to use version 1.0 of [php_component_curl](https://github.com/bazzline/php_component_curl)
+
 ## [0.1.2](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.2) - released at 2017-04-19
 
 ### Added
