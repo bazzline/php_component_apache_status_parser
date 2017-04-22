@@ -8,6 +8,8 @@ The build status of the current master branch is tracked by Travis CI:
 [![Build Status](https://travis-ci.org/bazzline/php_component_apache_status_parser.png?branch=master)](http://travis-ci.org/bazzline/php_component_apache_status_parser)
 [![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_apache_server_status_parser.svg)](https://packagist.org/packages/net_bazzline/php_component_apache_server_status_parser)
 
+The change log can be found [here](https://github.com/bazzline/php_component_apache_status_parser/blob/master/CHANGELOG.md).
+
 # Project Goals
 
 * provides simple access to process information (deals with strings)

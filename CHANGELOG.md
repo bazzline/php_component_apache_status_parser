@@ -28,6 +28,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+* link to this change log in the [README.md](https://github.com/bazzline/php_component_apache_status_parser/blob/master/README.md).
+
 ### Changed
 
 ## [0.1.2](https://github.com/bazzline/php_component_apache_status_parser/tree/0.1.2) - released at 2017-04-19
