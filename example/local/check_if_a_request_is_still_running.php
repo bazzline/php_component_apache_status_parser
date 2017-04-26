@@ -47,37 +47,44 @@ $parserBuilder->build();
 
 $listOfDetail = $parserBuilder->andGetListOfDetailOrNullAfterwards();
 
-foreach ($listOfDetail as $detail) {
-    $listOfPidToUriPathWithQuery[$detail->pid()] = $detail->uriPathWithQuery();
+$listOfDetailIsTraversable = (is_array($listOfDetail));
 
-    if ($detail->pid() == $pid) {
-        if ($uriPathProvided) {
-            if ($stringUtility->startsWith($detail->uriPathWithQuery(), $uriPath)) {
+if ($listOfDetailIsTraversable) {
+    foreach ($listOfDetail as $detail) {
+        $listOfPidToUriPathWithQuery[$detail->pid()] = $detail->uriPathWithQuery();
+
+        if ($detail->pid() == $pid) {
+            if ($uriPathProvided) {
+                if ($stringUtility->startsWith($detail->uriPathWithQuery(), $uriPath)) {
+                    $foundNoMatchingDetail = false;
+
+                    echo ':: Found a request with the pid: "' . $pid . '".' . PHP_EOL;
+                    echo ':: Found a request where the uri path with query starts with: "' . $uriPath . '".' . PHP_EOL;
+                    echo ':: Uri path with query' . PHP_EOL;
+                    echo $detail->uriPathWithQuery() . PHP_EOL;
+                }
+            } else {
                 $foundNoMatchingDetail = false;
 
                 echo ':: Found a request with the pid: "' . $pid . '".' . PHP_EOL;
-                echo ':: Found a request where the uri path with query starts with: "' . $uriPath . '".' . PHP_EOL;
                 echo ':: Uri path with query' . PHP_EOL;
                 echo $detail->uriPathWithQuery() . PHP_EOL;
             }
-        } else {
-            $foundNoMatchingDetail = false;
-
-            echo ':: Found a request with the pid: "' . $pid . '".' . PHP_EOL;
-            echo ':: Uri path with query' . PHP_EOL;
-            echo $detail->uriPathWithQuery() . PHP_EOL;
         }
     }
-}
 
-if ($foundNoMatchingDetail) {
-    echo ':: Dumping list of available requests.' . PHP_EOL;
-    echo PHP_EOL;
-    echo 'pid' . "\t" . 'uri path with query' . PHP_EOL;
-    echo '--------------------------------' . PHP_EOL;
+    if ($foundNoMatchingDetail) {
+        echo ':: Dumping list of available requests.' . PHP_EOL;
+        echo PHP_EOL;
+        echo 'pid' . "\t" . 'uri path with query' . PHP_EOL;
+        echo '--------------------------------' . PHP_EOL;
 
-    foreach ($listOfPidToUriPathWithQuery as $pid => $uriPathWithQuery) {
-        echo $pid . "\t" . $uriPathWithQuery . PHP_EOL;
+        foreach ($listOfPidToUriPathWithQuery as $pid => $uriPathWithQuery) {
+            echo $pid . "\t" . $uriPathWithQuery . PHP_EOL;
+        }
     }
+} else {
+    echo ':: Error' . PHP_EOL;
+    echo 'no details found in file "' . $pathToTheExampleFile . '"' . PHP_EOL;
 }
 //end of business logic

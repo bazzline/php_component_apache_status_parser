@@ -34,7 +34,7 @@ function dumpArray(array $array, $prefix = '  ')
 function dumpSectionIfThereIsSomeContent(array $lines, $name)
 {
     if (!empty($lines)) {
-        echo '==== ' . $name .' ====' . PHP_EOL;
+        echo '==== ' . $name . ' ====' . PHP_EOL;
         echo PHP_EOL;
 
         dumpArray($lines);
