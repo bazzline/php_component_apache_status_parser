@@ -3,7 +3,6 @@
  * @author stev leibelt <artodeto@bazzline.net>
  * @since 2017-04-07
  */
-use JonasRudolph\PHPComponents\StringUtility\Implementation\StringUtility;
 use Net\Bazzline\Component\ApacheServerStatusParser\DomainModel\ReduceDataAbleToArrayInterface;
 
 require __DIR__ . '/../../vendor/autoload.php';
@@ -47,11 +46,13 @@ function dumpSectionIfThereIsSomeContent(array $lines, $name)
 
 //begin of dependencies
 $listOfNameToElapsedTime    = [];
-$pathToTheExampleFile       = ($argc > 1)
-    ? $argv[1]
-    : __DIR__ . '/server-status?notable.html';
+$pathToTheExampleFile       = (
+    ($argc > 1)
+        ? $argv[1]
+        : __DIR__ . '/server-status?notable.html'
+);
 $parserBuilderFactory       = new \Net\Bazzline\Component\ApacheServerStatusParser\Service\Builder\ParserBuilderFactory();
-$storageBuilder                    = new \Net\Bazzline\Component\ApacheServerStatusParser\Service\Builder\LocalStorageBuilder();
+$storageBuilder             = new \Net\Bazzline\Component\ApacheServerStatusParser\Service\Builder\LocalStorageBuilder();
 
 $parserBuilder  = $parserBuilderFactory->create();
 //end of dependencies

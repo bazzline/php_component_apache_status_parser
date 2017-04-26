@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### To Add
 
-* create release history
 * write unit test
     * DetailListOfLineParser
     * Processor
@@ -18,9 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     * StatisticListOfLineParser
     * Storage
 * add the cool stuff from [here](https://github.com/bjhale/apache-status/blob/master/ApacheStatus.php) and [there](https://github.com/TomCan/server-status-parser) to this list (project steel with eyes wide open)
-* add link to the openhub.com project side
-* add a link to the scrutinizer status
-* add a link to the version eye status
+* add a link to the version eye status (currently not possible because of limitations)
 
 ### To Change
 
@@ -28,7 +25,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+* example "check_if_a_request_is_still_running.php" in the local example path
 * link to this change log in the [README.md](https://github.com/bazzline/php_component_apache_status_parser/blob/master/README.md).
+* link to the openhub page
 * link to the scrutinizer status
 * most important final words in the README.md
 * supported for php version 7.1

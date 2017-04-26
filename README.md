@@ -11,6 +11,8 @@ The build status of the current master branch is tracked by Travis CI:
 The scrutinizer status is:
 [![code quality](https://scrutinizer-ci.com/g/bazzline/php_component_apache_status_parser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_apache_status_parser/)
 
+Take a look on [openhub.net](https://www.openhub.net/p/php_component_apache_status_parser).
+
 The current change log can be found [here](https://github.com/bazzline/php_component_apache_status_parser/blob/master/CHANGELOG.md).
 
 # Project Goals
@@ -82,21 +84,27 @@ Examples are placed in the path [<project root>/example](https://github.com/bazz
 ## Example Using Local File
 
 ```
+cd <project root>/example/local
+
 #if no file path is provided, the shipped with example file will be used
 #parse all
-<project root>/example/local/parse_all.php [<path to the apache status file to parse>]
+php parse_all.php [<string: path to the apache status file to parse>]
 #parse detail only
-<project root>/example/local/parse_detail_only.php [<path to the apache status file to parse>]
+php parse_detail_only.php [<string: path to the apache status file to parse>]
+#check if a request is still running
+php check_if_a_request_is_still_running <int: pid> [<string: uri path> [<string: path to the example file>]]
 ```
 
 ## Example Using Remote File
 
 ```
+cd <project root>/example/remote
+
 #if no file path is provided, the build in example url will be used
 #parse all
-<project root>/example/remote/parse_all.php [<url to the apache status page>]
+php remote/parse_all.php [<string: url to the apache status page>]
 #parse detail only
-<project root>/example/remote/parse_detail_only.php [<url to the apache status page>]
+php parse_detail_only.php [<string: url to the apache status page>]
 ```
 
 ## Example Output
