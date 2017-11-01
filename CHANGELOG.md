@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### To Change
 
-## [0.3.0](https://github.com/bazzline/php_component_apache_status_parser/tree/0.2.1) - released at 2017-11-01
+## [0.3.0](https://github.com/bazzline/php_component_apache_status_parser/tree/0.3.0) - released at 2017-11-01
 
 ### Added
 
@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 * fixed code styling bugs from scrutinizer analyzes
+* removed composer.lock
 
 ## [0.2.0](https://github.com/bazzline/php_component_apache_status_parser/tree/0.2.0) - released at 2017-04-26
 
