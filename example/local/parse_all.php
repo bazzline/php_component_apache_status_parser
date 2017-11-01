@@ -28,18 +28,20 @@ function dumpArray(array $array, $prefix = '  ')
 }
 
 /**
- * @param array $lines
+ * @param null|array $lines
  * @param string $name
  */
-function dumpSectionIfThereIsSomeContent(array $lines, $name)
+function dumpSectionIfThereIsSomeContent(array $lines = null, $name)
 {
-    if (!empty($lines)) {
-        echo '==== ' . $name . ' ====' . PHP_EOL;
-        echo PHP_EOL;
+    if (!is_null($lines)) {
+        if (!empty($lines)) {
+            echo '==== ' . $name . ' ====' . PHP_EOL;
+            echo PHP_EOL;
 
-        dumpArray($lines);
+            dumpArray($lines);
 
-        echo PHP_EOL;
+            echo PHP_EOL;
+        }
     }
 }
 //end of helper functions
@@ -70,10 +72,22 @@ $listOfNameToElapsedTime['fetching']    = PHP_Timer::secondsToTimeString(
 
 $storage = $storageBuilder->andGetStorageAfterTheBuild();
 
-dumpSectionIfThereIsSomeContent($storage->getListOfInformation(), 'Information');
-dumpSectionIfThereIsSomeContent($storage->getListOfDetail(), 'Detail');
-dumpSectionIfThereIsSomeContent($storage->getListOfScoreboard(), 'Scoreboard');
-dumpSectionIfThereIsSomeContent($storage->getListOfStatistic(), 'Statistic');
+dumpSectionIfThereIsSomeContent(
+    $storage->getListOfInformation(),
+    'Information'
+);
+dumpSectionIfThereIsSomeContent(
+    $storage->getListOfDetail(),
+    'Detail'
+);
+dumpSectionIfThereIsSomeContent(
+    $storage->getListOfScoreboard(),
+    'Scoreboard'
+);
+dumpSectionIfThereIsSomeContent(
+    $storage->getListOfStatistic(),
+    'Statistic'
+);
 
 PHP_Timer::start();
 

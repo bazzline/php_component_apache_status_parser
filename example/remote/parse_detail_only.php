@@ -28,18 +28,20 @@ function dumpArray(array $array, $prefix = '  ')
 }
 
 /**
- * @param array $lines
+ * @param null|array $lines
  * @param string $name
  */
-function dumpSectionIfThereIsSomeContent(array $lines, $name)
+function dumpSectionIfThereIsSomeContent(array $lines = null, $name)
 {
-    if (!empty($lines)) {
-        echo '==== ' . $name . ' ====' . PHP_EOL;
-        echo PHP_EOL;
+    if (!is_null($lines)) {
+        if (!empty($lines)) {
+            echo '==== ' . $name . ' ====' . PHP_EOL;
+            echo PHP_EOL;
 
-        dumpArray($lines);
+            dumpArray($lines);
 
-        echo PHP_EOL;
+            echo PHP_EOL;
+        }
     }
 }
 //end of helper functions

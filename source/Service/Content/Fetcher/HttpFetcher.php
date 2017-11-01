@@ -6,27 +6,45 @@
 
 namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Fetcher;
 
+use Exception;
 use Net\Bazzline\Component\Curl\Builder\Builder;
+use Net\Bazzline\Component\Curl\Option\Behaviour\EnableAutoReferer;
+use Net\Bazzline\Component\Curl\Option\Behaviour\EnableFollowAllocation;
+use Net\Bazzline\Component\Curl\Option\Behaviour\SetMaxRedirs;
+use Net\Bazzline\Component\Curl\Option\Security\DisableSslVerifyHost;
+use Net\Bazzline\Component\Curl\Option\Security\DisableSslVerifyPeer;
+use Net\Bazzline\Component\Curl\Option\Transfer\SetPort;
+use Net\Bazzline\Component\Curl\Option\Transfer\SetProxy;
 use RuntimeException;
 
 class HttpFetcher extends AbstractFetcher
 {
+    const STATUS_CODE_HIGHER_THAN_ALLOWED_EXCEPTION_MESSAGE = 'Returned response code >>%d<< is above the limit of >>%d<<. Dumping the response >>%s<<.';
+
+    /** @var int */
+    private $highestAllowedStatusCode;
+
     /** @var Builder */
     private $requestBuilder;
 
     /** @var string */
     private $url;
 
+
+
     /**
      * HttpFetcher constructor.
      *
      * @param Builder $builder
+     * @param int $highestAllowedStatusCode
      */
     public function __construct(
-        Builder $builder
+        Builder $builder,
+        $highestAllowedStatusCode = 400
     )
     {
-        $this->requestBuilder   = $builder;
+        $this->requestBuilder           = $builder;
+        $this->highestAllowedStatusCode = $highestAllowedStatusCode;
     }
 
     /**
@@ -37,15 +55,19 @@ class HttpFetcher extends AbstractFetcher
         $this->url  = $url;
     }
 
+
+
     /**
      * @return string
-     * @throws \Net\Bazzline\Component\Csv\RuntimeException
+     * @throws RuntimeException
+     * @throws Exception
      */
     protected function fetchContentAsStringOrThrowRuntimeException()
     {
         //begin of dependencies
-        $requestBuilder = $this->requestBuilder;
-        $url            = $this->url;
+        $highestAllowedStatusCode   = $this->highestAllowedStatusCode;
+        $requestBuilder             = $this->requestBuilder;
+        $url                        = $this->url;
         //end of dependencies
 
         //begin of business logic
@@ -54,10 +76,14 @@ class HttpFetcher extends AbstractFetcher
 
         $response = $requestBuilder->andFetchTheResponse();
 
-        if ($response->statusCode() >= 300) {
+        if ($response->statusCode() >= $highestAllowedStatusCode) {
             throw new RuntimeException(
-                'something went wrong when using the url "' . $url . '"' . PHP_EOL
-                . 'dumping the response: ' . implode(', ', $response->convertIntoAnArray())
+                sprintf(
+                    self::STATUS_CODE_HIGHER_THAN_ALLOWED_EXCEPTION_MESSAGE,
+                    $response->statusCode(),
+                    $highestAllowedStatusCode,
+                    implode(', ' , $response->convertIntoAnArray())
+                )
             );
         }
 
