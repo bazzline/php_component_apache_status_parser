@@ -22,7 +22,7 @@ abstract class AbstractFetcher implements FetcherInterface
 
         $lines = array_filter(
             $contentAsArray,
-            function ($item) {
+            function($item) {
                 return (strlen(trim($item)) > 0);
             }
         );

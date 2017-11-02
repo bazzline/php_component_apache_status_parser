@@ -30,14 +30,14 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
     public function parse(array $listOfLine)
     {
         //begin of dependencies
-        $stringUtility  = $this->stringUtility;
+        $stringUtility = $this->stringUtility;
         //end of dependencies
 
         //begin of business logic
         $listOfLineHasMinimalSize = (count($listOfLine) > 9);
 
         if ($listOfLineHasMinimalSize) {
-            $listOfMandatoryPropertyNameToStartsWithPrefix  = [
+            $listOfMandatoryPropertyNameToStartsWithPrefix = [
                 'current_timestamp'                         => 'Current Time: ',
                 'cpu_usage'                                 => 'CPU Usage: ',
                 'parent_server_configuration_generation'    => 'Parent Server Config. Generation: ',
@@ -60,8 +60,7 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                 Total accesses: : 16
                 Total Traffic: : 15
              */
-
-            $listOMandatoryProperties   = [
+            $listOMandatoryProperties = [
                 'b_per_seconds'                             => null,
                 'current_time'                              => null,
                 'cpu_load'                                  => null,
@@ -105,33 +104,33 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                 } else if ($stringUtility->startsWith($line, $listOfMandatoryPropertyNameToStartsWithPrefix['server_load'])) {
                     $listOMandatoryProperties['server_load'] = substr($line, 13);
                 } else if ($stringUtility->startsWith($line, $listOfMandatoryPropertyNameToStartsWithPrefix['total_accesses'])) {
-                    $lineAsArray    = explode(' - ', $line);
+                    $lineAsArray = explode(' - ', $line);
 
                     $listOMandatoryProperties['total_accesses'] = substr($lineAsArray[0], 16);
                     $listOMandatoryProperties['total_traffic']  = substr($lineAsArray[1], 15);
                 } else if ($stringUtility->endsWith($line, 'request')) {
                     $lineAsArray    = explode(' - ', $line);
 
-                    $listOMandatoryProperties['b_per_seconds']                      = filter_var(
+                    $listOMandatoryProperties['b_per_seconds'] = filter_var(
                         $lineAsArray[1],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['kb_per_seconds']                     = filter_var(
+                    $listOMandatoryProperties['kb_per_seconds'] = filter_var(
                         $lineAsArray[2],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['request_per_seconds']                = filter_var(
+                    $listOMandatoryProperties['request_per_seconds'] = filter_var(
                         $lineAsArray[0],
                         FILTER_SANITIZE_NUMBER_INT
                     );
                 } else if ($stringUtility->endsWith($line, 'workers')) {
                     $lineAsArray    = explode(',', $line);
 
-                    $listOMandatoryProperties['idle_workers']                       = filter_var(
+                    $listOMandatoryProperties['idle_workers'] = filter_var(
                         $lineAsArray[1],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['request_currently_being_processed']  = filter_var(
+                    $listOMandatoryProperties['request_currently_being_processed'] = filter_var(
                         $lineAsArray[0],
                         FILTER_SANITIZE_NUMBER_INT
                     );

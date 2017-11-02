@@ -25,7 +25,7 @@ class InformationListOfLineParser implements ListOfLineParserInterface
     public function __construct(
         StringUtility $stringUtility
     ) {
-        $this->stringUtility    = $stringUtility;
+        $this->stringUtility = $stringUtility;
     }
 
     /**
@@ -63,7 +63,7 @@ class InformationListOfLineParser implements ListOfLineParserInterface
                 //stop repeating yourself, us the $listOfMandatoryPropertyNameToStartsWithPrefix
                 //take a look to the StatisticListOfLineParser
                 if ($stringUtility->startsWith($line, 'Apache Server Status for ')) {
-                    $listOMandatoryProperties['identifier'] = substr($line, 25);    //always use numbers if you are dealing with static strings
+                    $listOMandatoryProperties['identifier'] = substr($line, 25); //always use numbers if you are dealing with static strings
                 } else if ($stringUtility->startsWith($line, 'Server Version: ')) {
                     $listOMandatoryProperties['version'] = substr($line, 16);
                 } else if ($stringUtility->startsWith($line, 'Server MPM: ')) {

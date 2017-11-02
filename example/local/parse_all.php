@@ -56,7 +56,7 @@ $pathToTheExampleFile       = (
 $parserBuilderFactory       = new \Net\Bazzline\Component\ApacheServerStatusParser\Service\Builder\ParserBuilderFactory();
 $storageBuilder             = new \Net\Bazzline\Component\ApacheServerStatusParser\Service\Builder\LocalStorageBuilder();
 
-$parserBuilder  = $parserBuilderFactory->create();
+$parserBuilder = $parserBuilderFactory->create();
 //end of dependencies
 
 //begin of business logic
@@ -66,7 +66,7 @@ $storageBuilder->setPathToTheApacheStatusFileToParseUpfront($pathToTheExampleFil
 $storageBuilder->selectParseModeAllUpfront();
 $storageBuilder->build();
 
-$listOfNameToElapsedTime['fetching']    = PHP_Timer::secondsToTimeString(
+$listOfNameToElapsedTime['fetching'] = PHP_Timer::secondsToTimeString(
     PHP_Timer::stop()
 );
 

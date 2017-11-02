@@ -56,7 +56,7 @@ $urlToTheExampleFile        = (
         : 'http://testdata.bazzline.net/apache_server_status/index.html'
 );
 
-$parserBuilder  = $parserBuilderFactory->create();
+$parserBuilder = $parserBuilderFactory->create();
 //end of dependencies
 
 //begin of business logic
@@ -66,11 +66,11 @@ $storageBuilder->setUrlToTheApacheStatusFileToParseUpfront($urlToTheExampleFile)
 $storageBuilder->selectParseModeAllUpfront();
 $storageBuilder->build();
 
-$listOfNameToElapsedTime['fetching']    = PHP_Timer::secondsToTimeString(
+$listOfNameToElapsedTime['fetching'] = PHP_Timer::secondsToTimeString(
     PHP_Timer::stop()
 );
 
-$storage    = $storageBuilder->andGetStorageAfterTheBuild();
+$storage = $storageBuilder->andGetStorageAfterTheBuild();
 
 dumpSectionIfThereIsSomeContent($storage->getListOfInformation(), 'Information');
 dumpSectionIfThereIsSomeContent($storage->getListOfDetail(), 'Detail');
@@ -82,7 +82,7 @@ PHP_Timer::start();
 $parserBuilder->setStorageUpfront($storage);
 $parserBuilder->build();
 
-$listOfNameToElapsedTime['parsing']    = PHP_Timer::secondsToTimeString(
+$listOfNameToElapsedTime['parsing'] = PHP_Timer::secondsToTimeString(
     PHP_Timer::stop()
 );
 

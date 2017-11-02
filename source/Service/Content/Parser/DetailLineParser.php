@@ -73,7 +73,7 @@ class DetailLineParser implements LineParserInterface
                 '',
                 (isset($lineAsArray[19]) ? $lineAsArray[19] : $lineAsArray[18])
             );
-        $uriPathWithQuery   = (
+        $uriPathWithQuery = (
             $stringUtility->endsWith($lineAsArray[17], '}')
                 ? substr($lineAsArray[17], 0, -1)
                 : $lineAsArray[17]

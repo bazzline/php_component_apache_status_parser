@@ -44,7 +44,7 @@ class HttpFetcher extends AbstractFetcher
      */
     public function setUrl($url)
     {
-        $this->url  = $url;
+        $this->url = $url;
     }
 
 
@@ -74,7 +74,10 @@ class HttpFetcher extends AbstractFetcher
                     self::STATUS_CODE_HIGHER_THAN_ALLOWED_EXCEPTION_MESSAGE,
                     $response->statusCode(),
                     $highestAllowedStatusCode,
-                    implode(', ' , $response->convertIntoAnArray())
+                    implode(
+                        ', ',
+                        $response->convertIntoAnArray()
+                    )
                 )
             );
         }
