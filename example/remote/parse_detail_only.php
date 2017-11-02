@@ -70,7 +70,7 @@ $listOfNameToElapsedTime['fetching'] = PHP_Timer::secondsToTimeString(
     PHP_Timer::stop()
 );
 
-$storage    = $storageBuilder->andGetStorageAfterTheBuild();
+$storage = $storageBuilder->andGetStorageAfterTheBuild();
 
 dumpSectionIfThereIsSomeContent($storage->getListOfDetail(), 'Detail');
 

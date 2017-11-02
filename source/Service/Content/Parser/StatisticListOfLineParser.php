@@ -109,7 +109,7 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                     $listOMandatoryProperties['total_accesses'] = substr($lineAsArray[0], 16);
                     $listOMandatoryProperties['total_traffic']  = substr($lineAsArray[1], 15);
                 } else if ($stringUtility->endsWith($line, 'request')) {
-                    $lineAsArray    = explode(' - ', $line);
+                    $lineAsArray = explode(' - ', $line);
 
                     $listOMandatoryProperties['b_per_seconds'] = filter_var(
                         $lineAsArray[1],
@@ -124,7 +124,7 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                         FILTER_SANITIZE_NUMBER_INT
                     );
                 } else if ($stringUtility->endsWith($line, 'workers')) {
-                    $lineAsArray    = explode(',', $line);
+                    $lineAsArray = explode(',', $line);
 
                     $listOMandatoryProperties['idle_workers'] = filter_var(
                         $lineAsArray[1],

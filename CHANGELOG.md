@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### To Change
 
+* fixed code styling bugs from [scrutinizer analyzes](https://scrutinizer-ci.com/g/bazzline/php_component_apache_status_parser/inspections/3a8f7694-a6b2-4c12-ab52-647a70ddd5de/patches?status=all)
+
 ## [0.3.1](https://github.com/bazzline/php_component_apache_status_parser/tree/0.3.1) - released at 2017-11-02
 
 ### Changed
