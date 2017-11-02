@@ -13,7 +13,7 @@ use Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Storage\Deta
 use Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Storage\FullStorage;
 use Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Storage\StorageInterface;
 use Net\Bazzline\Component\ApacheServerStatusParser\Service\StateMachine\SectionStateMachine;
-use Net\Bazzline\Component\Csv\RuntimeException;
+use RuntimeException;
 
 abstract class AbstractStorageBuilder implements BuilderInterface
 {
@@ -53,7 +53,9 @@ abstract class AbstractStorageBuilder implements BuilderInterface
         } else if ($this->isParseModeDetailOnly()) {
             $storage = new DetailOnlyStorage($stringUtility);
         } else {
-            throw new RuntimeException('no parse mode set');
+            throw new RuntimeException(
+                'no parse mode set'
+            );
         }
 
         $processor = new Processor(

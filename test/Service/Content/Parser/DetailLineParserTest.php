@@ -28,8 +28,11 @@ class DetailLineParserTest extends PHPUnit_Framework_TestCase
         );
     }
 
+
+
     /**
      * @param string $line
+     * @throws InvalidArgumentException
      * @expectedException InvalidArgumentException
      * @dataProvider invalidTestCaseDataProvider
      */
@@ -44,9 +47,12 @@ class DetailLineParserTest extends PHPUnit_Framework_TestCase
         //end of business logic
     }
 
+
+
     /**
      * @param string $line
      * @param Detail $expectedDetail
+     * @throws InvalidArgumentException
      * @dataProvider validTestCaseDataProvider
      */
     public function testParseValidContent($line, Detail $expectedDetail)

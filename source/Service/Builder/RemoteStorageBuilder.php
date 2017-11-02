@@ -20,7 +20,7 @@ class RemoteStorageBuilder extends AbstractStorageBuilder
 
     public function __construct()
     {
-        $factory    = new BuilderFactory();
+        $factory = new BuilderFactory();
 
         $this->fetcher = new HttpFetcher(
             $factory->create()

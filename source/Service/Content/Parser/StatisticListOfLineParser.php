@@ -6,7 +6,6 @@
 
 namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Parser;
 
-use DateTime;
 use InvalidArgumentException;
 use JonasRudolph\PHPComponents\StringUtility\Implementation\StringUtility;
 use Net\Bazzline\Component\ApacheServerStatusParser\DomainModel\Statistic;
@@ -18,9 +17,8 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
 
     public function __construct(
         StringUtility $stringUtility
-    )
-    {
-        $this->stringUtility    = $stringUtility;
+    ) {
+        $this->stringUtility = $stringUtility;
     }
 
     /**
@@ -87,13 +85,13 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                         substr($line, 14)
                     );
                 } else if ($stringUtility->startsWith($line, $listOfMandatoryPropertyNameToStartsWithPrefix['cpu_usage'])) {
-                    $lineAsArray    = explode(' - ', $line);
+                    $lineAsArray = explode(' - ', $line);
 
-                    $listOMandatoryProperties['cpu_load']   = filter_var(
+                    $listOMandatoryProperties['cpu_load'] = filter_var(
                         $lineAsArray[1],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['cpu_usage']  = substr($lineAsArray[0], 11);
+                    $listOMandatoryProperties['cpu_usage'] = substr($lineAsArray[0], 11);
                 } else if ($stringUtility->startsWith($line, $listOfMandatoryPropertyNameToStartsWithPrefix['parent_server_configuration_generation'])) {
                     $listOMandatoryProperties['parent_server_configuration_generation'] = substr($line, 34);
                 } else if ($stringUtility->startsWith($line, $listOfMandatoryPropertyNameToStartsWithPrefix['parent_server_mpm_generation'])) {
@@ -114,15 +112,15 @@ class StatisticListOfLineParser implements ListOfLineParserInterface
                 } else if ($stringUtility->endsWith($line, 'request')) {
                     $lineAsArray    = explode(' - ', $line);
 
-                    $listOMandatoryProperties['b_per_seconds']          = filter_var(
+                    $listOMandatoryProperties['b_per_seconds']                      = filter_var(
                         $lineAsArray[1],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['kb_per_seconds']         = filter_var(
+                    $listOMandatoryProperties['kb_per_seconds']                     = filter_var(
                         $lineAsArray[2],
                         FILTER_SANITIZE_NUMBER_INT
                     );
-                    $listOMandatoryProperties['request_per_seconds']    = filter_var(
+                    $listOMandatoryProperties['request_per_seconds']                = filter_var(
                         $lineAsArray[0],
                         FILTER_SANITIZE_NUMBER_INT
                     );

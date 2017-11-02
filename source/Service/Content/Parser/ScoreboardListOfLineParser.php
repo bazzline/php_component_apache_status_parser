@@ -7,7 +7,6 @@
 namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Parser;
 
 use InvalidArgumentException;
-use JonasRudolph\PHPComponents\StringUtility\Implementation\StringUtility;
 use Net\Bazzline\Component\ApacheServerStatusParser\DomainModel\Scoreboard;
 
 class ScoreboardListOfLineParser implements ListOfLineParserInterface
@@ -24,12 +23,11 @@ class ScoreboardListOfLineParser implements ListOfLineParserInterface
         $listOfLineHasMinimalSize = (count($listOfLine) > 12);
 
         if ($listOfLineHasMinimalSize) {
+            $collectListOfLegend        = false;
             $listOMandatoryProperties   = [
                 'list_of_legend'    => [],
                 'line_of_process'   => ''
             ];
-
-            $collectListOfLegend    = false;
 
             foreach ($listOfLine as $line) {
                 if ($collectListOfLegend) {

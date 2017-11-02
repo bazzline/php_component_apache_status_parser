@@ -26,8 +26,7 @@ class Scoreboard implements ReduceDataAbleToArrayInterface
     public function __construct(
         $lineOfProcess,
         array $listOfLegend
-    )
-    {
+    ) {
         $this->lineOfProcess    = $lineOfProcess;
         $this->listOfLegend     = $listOfLegend;
     }

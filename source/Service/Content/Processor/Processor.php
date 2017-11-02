@@ -31,8 +31,7 @@ class Processor
         SectionStateMachine $stateMachine,
         StringUtility $stringUtility,
         StorageInterface $storage
-    )
-    {
+    ) {
         $storage->clear();
         $stateMachine->reset();
 
@@ -61,11 +60,11 @@ class Processor
 
         if ($stateMachine->theCurrentStateIsDetail()) {
             $storage->addDetail($line);
-        } else if($stateMachine->theCurrentStateIsInformation()) {
+        } else if ($stateMachine->theCurrentStateIsInformation()) {
             $storage->addInformation($line);
-        } else if($stateMachine->theCurrentStateIsScoreboard()) {
+        } else if ($stateMachine->theCurrentStateIsScoreboard()) {
             $storage->addScoreboard($line);
-        } else if($stateMachine->theCurrentStateIsStatistic()) {
+        } else if ($stateMachine->theCurrentStateIsStatistic()) {
             $storage->addStatistic($line);
         }
 

@@ -20,7 +20,7 @@ class ParserBuilderFactory
      */
     public function create()
     {
-        $stringUtility    = new StringUtility();
+        $stringUtility = new StringUtility();
 
         return new ParserBuilder(
             new DetailListOfLineParser(
@@ -31,9 +31,7 @@ class ParserBuilderFactory
             new InformationListOfLineParser(
                 $stringUtility
             ),
-            new ScoreboardListOfLineParser(
-                $stringUtility
-            ),
+            new ScoreboardListOfLineParser(),
             new StatisticListOfLineParser(
                 $stringUtility
             )

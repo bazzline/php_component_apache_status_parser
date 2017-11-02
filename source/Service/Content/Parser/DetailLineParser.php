@@ -20,9 +20,10 @@ class DetailLineParser implements LineParserInterface
      *
      * @param StringUtility $stringUtility
      */
-    public function __construct(StringUtility $stringUtility)
-    {
-        $this->stringUtility    = $stringUtility;
+    public function __construct(
+        StringUtility $stringUtility
+    ) {
+        $this->stringUtility = $stringUtility;
     }
 
     /**
@@ -33,7 +34,7 @@ class DetailLineParser implements LineParserInterface
     public function parse($line)
     {
         //begin of dependencies
-        $stringUtility  = $this->stringUtility;
+        $stringUtility = $this->stringUtility;
         //end of dependencies
 
         //begin of business logic

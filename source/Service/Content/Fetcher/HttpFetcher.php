@@ -8,13 +8,6 @@ namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Fetche
 
 use Exception;
 use Net\Bazzline\Component\Curl\Builder\Builder;
-use Net\Bazzline\Component\Curl\Option\Behaviour\EnableAutoReferer;
-use Net\Bazzline\Component\Curl\Option\Behaviour\EnableFollowAllocation;
-use Net\Bazzline\Component\Curl\Option\Behaviour\SetMaxRedirs;
-use Net\Bazzline\Component\Curl\Option\Security\DisableSslVerifyHost;
-use Net\Bazzline\Component\Curl\Option\Security\DisableSslVerifyPeer;
-use Net\Bazzline\Component\Curl\Option\Transfer\SetPort;
-use Net\Bazzline\Component\Curl\Option\Transfer\SetProxy;
 use RuntimeException;
 
 class HttpFetcher extends AbstractFetcher
@@ -41,8 +34,7 @@ class HttpFetcher extends AbstractFetcher
     public function __construct(
         Builder $builder,
         $highestAllowedStatusCode = 400
-    )
-    {
+    ) {
         $this->requestBuilder           = $builder;
         $this->highestAllowedStatusCode = $highestAllowedStatusCode;
     }

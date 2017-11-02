@@ -50,8 +50,7 @@ class Detail implements ReduceDataAbleToArrayInterface
         $status,
         $uriAuthority,
         $uriPathWithQuery
-    )
-    {
+    ) {
         $this->httpMethod       = $httpMethod;
         $this->ipAddress        = $ipAddress;
         $this->pid              = $pid;

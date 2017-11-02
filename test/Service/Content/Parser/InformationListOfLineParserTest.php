@@ -27,9 +27,13 @@ class InformationListOfLineParserTest extends PHPUnit_Framework_TestCase
         );
     }
 
+
+
     /**
      * @param array|string[] $listOfLine
-     * @param Information
+     * @param Information $expectedInformation
+     * @throws \InvalidArgumentException
+     * @internal param $Information
      * @dataProvider validTestCaseDataProvider
      */
     public function testParseListOfLine(array $listOfLine, Information $expectedInformation)

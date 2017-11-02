@@ -32,11 +32,12 @@ class FullStorage implements StorageInterface
      *
      * @param StringUtility $stringUtility
      */
-    public function __construct(StringUtility $stringUtility)
-    {
+    public function __construct(
+        StringUtility $stringUtility
+    ) {
         $this->clear();
 
-        $this->stringUtility    = $stringUtility;
+        $this->stringUtility = $stringUtility;
     }
 
     /**
@@ -88,12 +89,11 @@ class FullStorage implements StorageInterface
 
     public function clear()
     {
-        $this->currentIndexKeyForListOfDetail  = null;
-
-        $this->listOfDetail         = [];
-        $this->listOfInformation    = [];
-        $this->listOfScoreboard     = [];
-        $this->listOfStatistic      = [];
+        $this->currentIndexKeyForListOfDetail   = null;
+        $this->listOfDetail                     = [];
+        $this->listOfInformation                = [];
+        $this->listOfScoreboard                 = [];
+        $this->listOfStatistic                  = [];
     }
 
     /**

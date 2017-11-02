@@ -38,8 +38,7 @@ class Information implements ReduceDataAbleToArrayInterface
         $identifier,
         $modeOfMpm,
         $version
-    )
-    {
+    ) {
         $this->dateOfBuilt  = $dateOfBuilt;
         $this->identifier   = $identifier;
         $this->modeOfMpm    = $modeOfMpm;

@@ -59,8 +59,7 @@ class ParserBuilder implements BuilderInterface
         InformationListOfLineParser $informationListOfLineParser,
         ScoreboardListOfLineParser $scoreboardListOfLineParser,
         StatisticListOfLineParser $statisticListOfLineParser
-    )
-    {
+    ) {
         $this->detailListOfLineParser       = $detailListOfLineParser;
         $this->informationListOfLineParser  = $informationListOfLineParser;
         $this->scoreboardListOfLineParser   = $scoreboardListOfLineParser;
@@ -72,7 +71,7 @@ class ParserBuilder implements BuilderInterface
      */
     public function setStorageUpfront(StorageInterface $storage)
     {
-        $this->storage  = $storage;
+        $this->storage = $storage;
     }
 
     /**
@@ -94,25 +93,25 @@ class ParserBuilder implements BuilderInterface
 
         //begin of business logic
         if ($storage->hasListOfDetail()) {
-            $listOfDetailOrNull   = $detailListOfLineParser->parse(
+            $listOfDetailOrNull = $detailListOfLineParser->parse(
                 $storage->getListOfDetail()
             );
         }
 
         if ($storage->hasListOfInformation()) {
-            $informationOrNull  = $informationListOfLineParser->parse(
+            $informationOrNull = $informationListOfLineParser->parse(
                 $storage->getListOfInformation()
             );
         }
 
         if ($storage->hasListOfScoreboard()) {
-            $scoreboardOrNull   = $scoreboardListOfLineParser->parse(
+            $scoreboardOrNull = $scoreboardListOfLineParser->parse(
                 $storage->getListOfScoreboard()
             );
         }
 
         if ($storage->hasListOfStatistic()) {
-            $statisticOrNull    = $statisticListOfLineParser->parse(
+            $statisticOrNull = $statisticListOfLineParser->parse(
                 $storage->getListOfStatistic()
             );
         }

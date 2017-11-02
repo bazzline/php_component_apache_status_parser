@@ -21,8 +21,7 @@ class DetailListOfLineParser implements ListOfLineParserInterface
      */
     public function __construct(
         DetailLineParser $detailLineParser
-    )
-    {
+    ) {
         $this->detailLineParser = $detailLineParser;
     }
 
@@ -42,8 +41,9 @@ class DetailListOfLineParser implements ListOfLineParserInterface
         //begin of business logic
         foreach ($listOfLine as $line) {
             try {
-                $listOfParsedDetailLines[]  = $detailLineParser->parse($line);
+                $listOfParsedDetailLines[] = $detailLineParser->parse($line);
             } catch (InvalidArgumentException $invalidArgumentException) {
+                //@todo
                 //echo get_class($detailLineParser) . ' could not parse the following line:' . PHP_EOL;
                 //echo '    ' . $line . PHP_EOL;
                 //echo $invalidArgumentException->getMessage() . PHP_EOL;

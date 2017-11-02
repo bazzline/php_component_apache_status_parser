@@ -5,7 +5,6 @@
  */
 namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Fetcher;
 
-use Net\Bazzline\Component\GenericAgreement\Exception\Runtime;
 use RuntimeException;
 
 class FileFetcher extends AbstractFetcher
@@ -23,17 +22,17 @@ class FileFetcher extends AbstractFetcher
 
     /**
      * @return string
-     * @throws \Net\Bazzline\Component\Csv\RuntimeException
+     * @throws RuntimeException
      */
     protected function fetchContentAsStringOrThrowRuntimeException()
     {
         //begin of dependencies
-        $path   = $this->path;
+        $path = $this->path;
         //end of dependencies
 
         //begin of business logic
         if (!is_readable($path)) {
-            throw new Runtime(
+            throw new RuntimeException(
                 'provided path "' . $path . '" is not readable.'
             );
         }

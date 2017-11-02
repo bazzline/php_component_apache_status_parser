@@ -6,7 +6,7 @@
 
 namespace Net\Bazzline\Component\ApacheServerStatusParser\Service\Content\Fetcher;
 
-use Net\Bazzline\Component\Csv\RuntimeException;
+use RuntimeException;
 
 abstract class AbstractFetcher implements FetcherInterface
 {
@@ -17,8 +17,8 @@ abstract class AbstractFetcher implements FetcherInterface
     public function fetch()
     {
         //begin of business logic
-        $contentAsString        = strip_tags($this->fetchContentAsStringOrThrowRuntimeException());
-        $contentAsArray = explode(PHP_EOL, $contentAsString);
+        $contentAsString    = strip_tags($this->fetchContentAsStringOrThrowRuntimeException());
+        $contentAsArray     = explode(PHP_EOL, $contentAsString);
 
         $lines = array_filter(
             $contentAsArray,

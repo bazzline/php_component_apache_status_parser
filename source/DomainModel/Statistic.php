@@ -6,8 +6,6 @@
 
 namespace Net\Bazzline\Component\ApacheServerStatusParser\DomainModel;
 
-use DateTime;
-
 class Statistic implements ReduceDataAbleToArrayInterface
 {
     const REDUCED_DATA_TO_ARRAY_KEY_B_PER_SECOND                            = 'b_per_request';
@@ -87,8 +85,7 @@ class Statistic implements ReduceDataAbleToArrayInterface
         $serverUpTime,
         $totalAccess,
         $totalTraffic
-    )
-    {
+    ) {
         $this->bPerSecond                           = $bPerSecond;
         $this->cpuLoad                              = $cpuLoad;
         $this->cpuUsage                             = $cpuUsage;

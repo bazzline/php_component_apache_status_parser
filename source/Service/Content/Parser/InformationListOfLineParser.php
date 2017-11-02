@@ -15,10 +15,16 @@ class InformationListOfLineParser implements ListOfLineParserInterface
     /** @var StringUtility */
     private $stringUtility;
 
+
+
+    /**
+     * InformationListOfLineParser constructor.
+     *
+     * @param StringUtility $stringUtility
+     */
     public function __construct(
         StringUtility $stringUtility
-    )
-    {
+    ) {
         $this->stringUtility    = $stringUtility;
     }
 
@@ -32,21 +38,21 @@ class InformationListOfLineParser implements ListOfLineParserInterface
     public function parse(array $listOfLine)
     {
         //begin of dependencies
-        $stringUtility  = $this->stringUtility;
+        $stringUtility = $this->stringUtility;
         //end of dependencies
 
         //begin of business logic
         $listOfLineHasMinimalSize = (count($listOfLine) > 3);
 
         if ($listOfLineHasMinimalSize) {
-            $listOfMandatoryPropertyNameToStartsWithPrefix  = [
+            $listOfMandatoryPropertyNameToStartsWithPrefix = [
                 'date_of_built' => 'Server Built: ',
                 'identifier'    => 'Apache Server Status for ',
                 'mode_of_mpm'   => 'Server MPM: ',
                 'version'       => 'Server Version: '
             ];
 
-            $listOMandatoryProperties   = [
+            $listOMandatoryProperties = [
                 'date_of_built' => null,
                 'identifier'    => null,
                 'mode_of_mpm'   => null,
